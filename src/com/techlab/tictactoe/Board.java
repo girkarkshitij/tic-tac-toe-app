@@ -31,6 +31,7 @@ public class Board {
 			}
 			System.out.println();
 		}
+		System.out.println();
 	}
 
 	public Mark[][] getBoard() {
@@ -60,11 +61,11 @@ public class Board {
 					insert(row, col, currentPlayer);
 					break;
 				} catch (CellIsAlreadyFilled e) {
-					System.out.println("This cell is already filled.");
+					System.err.println("This cell is already filled.");
 				} catch (ArrayIndexOutOfBoundsException e) {
-					System.out.println("Invalid input.");
+					System.err.println("Invalid input.");
 				} catch (NumberFormatException e) {
-					System.out.println("Invalid input.");
+					System.err.println("Invalid input.");
 				}
 			}
 
